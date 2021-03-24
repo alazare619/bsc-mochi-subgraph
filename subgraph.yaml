@@ -1,16 +1,16 @@
 specVersion: 0.0.2
-description: PancakeSwap is a decentralized protocol for automated token exchange on Binance Smart Chain.
+description: MOCHISWAP is a AMM and Liquduity provider.
 repository: https://github.com/mochiswap/bsc-mochi-subgraph
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: mainnet
+    network: bsc
     source:
       address: '0xCBac17919f7aad11E623Af4FeA98B10B84802eAc'
       abi: Factory
-      startBlock: 586851
+      startBlock: 5270228
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -34,7 +34,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pair
-    network: mainnet
+    network: bsc
     source:
       abi: Pair
     mapping:
